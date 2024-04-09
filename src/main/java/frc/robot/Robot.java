@@ -5,11 +5,11 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.XboxController;
+//import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import frc.robot.Constants.DriveTrain;
+//import frc.robot.Constants.DriveTrain;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -18,7 +18,7 @@ import frc.robot.Constants.DriveTrain;
  * project.
  */
 public class Robot extends TimedRobot {
-  private XboxController joy1 = new XboxController(DriveTrain.kJoystickPort);
+  //private XboxController joy1 = new XboxController(DriveTrain.kJoystickPort);
   private Command m_autonomousCommand; 
 
   private RobotContainer m_robotContainer; 
@@ -33,8 +33,9 @@ public class Robot extends TimedRobot {
     SmartDashboard.setDefaultBoolean("TurboActivation", false);
     SmartDashboard.setDefaultBoolean("PercisionActivation", false);
 
-    SmartDashboard.setDefaultNumber("SpeedFactor", DriveTrain.kSpeedFactor);
+    /*SmartDashboard.setDefaultNumber("SpeedFactor", DriveTrain.kSpeedFactor);
     SmartDashboard.setDefaultNumber("TurnFactor", DriveTrain.kTurnFactor);
+    */
 
     SmartDashboard.setDefaultString("Intake Pos", "N/A"); 
     
@@ -46,8 +47,8 @@ public class Robot extends TimedRobot {
 
   @Override
   public void robotPeriodic() {
-    SmartDashboard.putNumber("Drive Axis", joy1.getLeftY());
-    SmartDashboard.putNumber("Turn Axis", joy1.getRightX());
+    //SmartDashboard.putNumber("Drive Axis", joy1.getLeftY());
+    //SmartDashboard.putNumber("Turn Axis", joy1.getRightX());
     CommandScheduler.getInstance().run(); 
 
   }
